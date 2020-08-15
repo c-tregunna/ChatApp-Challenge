@@ -1,0 +1,26 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $bg;
+    font-size: 1em;
+    font-family: $main-font;
+}
+
+main {
+    width: 80%;
+    max-width: 700px;
+    height: 60vh;
+    margin: auto;
+    background: $main-bg;
+    border-radius: 10px;
+    margin-top: 20vh;
+}
+
+header {
+    background: $header;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 10%;
+}
