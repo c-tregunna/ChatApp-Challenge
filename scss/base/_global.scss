@@ -24,3 +24,35 @@ header {
     border-top-right-radius: 10px;
     height: 10%;
 }
+
+.wrapper {
+    display: grid;
+    padding: 10px;
+    height: 90%;
+    grid-template-columns: 25% 1fr;
+    grid-template-rows: 1fr 50px;
+    grid-gap: 10px;
+    grid-template-areas:
+    "aside section"
+    "aside footer";
+}
+
+aside {
+    grid-area: aside;
+}
+
+section {
+    grid-area: section;
+}
+
+footer {
+    grid-area: footer;
+}
+
+aside,
+section,
+footer {
+    background: $white;
+    border-radius: 6px;
+    box-shadow: 0px 2px 2px rgba(120, 120, 120, .5);
+}
