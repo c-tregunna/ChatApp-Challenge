@@ -9,13 +9,13 @@ body {
 }
 
 main {
-    width: 80%;
-    max-width: 700px;
-    height: 60vh;
+    width: 90%;
+    max-width: 900px;
+    height: 70vh;
     margin: auto;
     background: $main-bg;
     border-radius: 10px;
-    margin-top: 20vh;
+    margin-top: 15vh;
 }
 
 header {
@@ -47,6 +47,8 @@ section {
 
 footer {
     grid-area: footer;
+    @include flex($dir: row, $just: space-between, $align: center);
+    padding: 0px 15px;
 }
 
 aside,
