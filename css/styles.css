@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
@@ -434,6 +435,62 @@ header {
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   height: 10%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.buttons,
+.online {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 10%;
+  height: 80%;
+  margin: 30px;
+}
+.buttons ul,
+.online ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.buttons li,
+.online li {
+  padding: 4px;
+}
+.buttons .window-btn::before,
+.online .window-btn::before {
+  content: "●";
+  font-size: 1.25em;
+}
+
+.online:not(.is-online) {
+  color: #FFF;
+}
+
+.close {
+  color: #ff8a8a;
+}
+
+.min {
+  color: #e5c46e;
+}
+
+.max {
+  color: #98dec5;
+}
+
+.is-online {
+  color: #94F6D3;
+}
+
+.arrow {
+  display: block;
+  transform: rotate(-90deg);
 }
 
 .wrapper {

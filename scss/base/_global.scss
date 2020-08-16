@@ -23,6 +23,49 @@ header {
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     height: 10%;
+    @include flex($dir: row, $just: space-between, $align: center);
+}
+
+.buttons,
+.online {
+    @include flex($dir: row, $just: center, $align: center);
+    width: 10%;
+    height: 80%;
+    margin: 30px;
+    & ul{
+        @include flex($dir: row, $just: center, $align: center);
+    }
+    & li {
+        padding: 4px;
+    }
+    & .window-btn::before {
+        content: "●";
+        font-size: 1.25em;
+    }
+}
+
+.online:not(.is-online) {
+    color: $white;
+}
+.close {
+    color: #ff8a8a;
+}
+
+.min {
+    color: #e5c46e;
+}
+
+.max {
+    color: #98dec5;
+}
+
+.is-online {
+    color: #94F6D3
+}
+
+.arrow {
+    display: block;
+    transform: rotate(-90deg);
 }
 
 .wrapper {
