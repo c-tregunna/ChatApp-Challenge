@@ -22,6 +22,7 @@ presidents.forEach(president => {
 
 /********************
  * Append a message to the main section
+ * need to find names of presidents who are only marked as online, as these should be who is commenting
  */
 
 let nameArray = presidents.map(a => a.name);
@@ -44,7 +45,7 @@ submitButton.addEventListener('click', () => {
     let text = document.createElement('P');
     let span = document.createElement('SPAN');
     text.textContent = messageInput.value;
-    span.textContent = `By ${randomName(nameArray)}`;
+    span.textContent = `from ${randomName(nameArray)}`;
     text.appendChild(span);
     message.appendChild(text);
     messageInput.value = '';

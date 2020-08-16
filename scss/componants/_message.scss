@@ -1,8 +1,8 @@
 .message {
-    height: 40px;
+    height: auto;
     width: 90%;
     margin: 6px auto;
-    padding: 4px;
+    padding: 4px 8px;
     background: lighten($black, 95%);
     border-radius: 6px;
     @include flex ($dir: row, $align: center, $just: space-between);
@@ -14,5 +14,9 @@
 }
 
 .message p span {
+    min-width: 20%;
     color: lighten($black, 70%);
+    font-size: .75em;
+    padding-left: 10px;
+    border-left: 1px solid;
 }
