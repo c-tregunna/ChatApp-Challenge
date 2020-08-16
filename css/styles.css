@@ -484,6 +484,12 @@ header {
   color: #98dec5;
 }
 
+.close:hover,
+.min:hover,
+.max:hover {
+  transform: scale(1.06);
+}
+
 .is-online {
   color: #94F6D3;
 }
@@ -508,6 +514,12 @@ aside {
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: scroll;
+}
+
+hr {
+  border: 1px solid #cccccc;
+  width: 80%;
 }
 
 section {
@@ -555,7 +567,7 @@ aside ul {
 }
 
 .president-list-items {
-  background: #d9e3e5;
+  background: #f2f2f2;
   border-radius: 8px;
   padding: 4px;
   margin: 4px;
@@ -564,6 +576,42 @@ aside ul {
   content: "●";
   font-size: 1em;
   margin-right: 8px;
+}
+
+.p-online .president-list-items::before {
+  color: #94F6D3;
+}
+
+.p-idle .president-list-items::before {
+  color: #fcd7a1;
+}
+
+.p-away .president-list-items::before {
+  color: #cfd8d4;
+}
+
+.message {
+  height: 40px;
+  width: 90%;
+  margin: 6px auto;
+  padding: 4px;
+  background: #f2f2f2;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.message p {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.message p span {
+  color: #b3b3b3;
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -3,7 +3,7 @@ aside ul {
 }
 
 .president-list-items {
-    background: $main-bg;
+    background: lighten($black, 95%);
     border-radius: 8px;
     padding: 4px;
     margin: 4px;
@@ -14,3 +14,14 @@ aside ul {
     }
 }
 
+.p-online .president-list-items::before {
+    color: #94F6D3;
+}
+
+.p-idle .president-list-items::before {
+    color: #fcd7a1;
+}
+
+.p-away .president-list-items::before {
+    color: #cfd8d4;
+}

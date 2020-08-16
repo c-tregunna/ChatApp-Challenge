@@ -59,8 +59,14 @@ header {
     color: #98dec5;
 }
 
+.close:hover,
+.min:hover,
+.max:hover {
+    transform: scale(1.06);
+}
+
 .is-online {
-    color: #94F6D3
+    color: #94F6D3;
 }
 
 .arrow {
@@ -83,6 +89,12 @@ header {
 aside {
     grid-area: aside;
     @include flex($dir: column, $align: center);
+    overflow: scroll;
+}
+
+hr {
+    border: 1px solid lighten($black, 80%);
+    width: 80%;
 }
 
 section {
