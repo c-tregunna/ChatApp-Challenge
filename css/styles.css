@@ -576,6 +576,11 @@ input:focus {
   border-bottom: 1px solid #75e0c0;
   outline: none;
 }
+input::placeholder {
+  color: #cccccc;
+  font-size: 0.75em;
+  font-style: italic;
+}
 
 button {
   background: #75e0c0;
