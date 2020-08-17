@@ -25,7 +25,8 @@ presidents.forEach(president => {
  * need to find names of presidents who are only marked as online, as these should be who is commenting
  */
 
-let nameArray = presidents.map(pres => pres.name); //(pres => pres.isOnline); //This makes an array just of the names.
+
+let nameArray = presidents.map(pres => pres.isOnline); //(pres => pres.isOnline); //This makes an array just of the names.
 console.log(nameArray);
 
  function randomName (nameArray) {
@@ -40,6 +41,9 @@ const messageInput = document.querySelector('input.addMessage');
 const submitButton = document.querySelector('button.submit');
 
 submitButton.addEventListener('click', () => {
+    if(messageInput.value === "") {
+        alert("Don't forget your message");
+    } else {
     let message = document.createElement("DIV");
     message.classList.add('message');
     let text = document.createElement('P');
@@ -50,7 +54,15 @@ submitButton.addEventListener('click', () => {
     message.appendChild(text);
     messageInput.value = '';
     messageBlock.appendChild(message);
+}
   });
+
+  const offLine = document.querySelector('.arrow');
+
+  offLine.addEventListener('click', e => {
+      const onlineList = document.querySelector('.offline');
+      onlineList.classList.toggle('hidden');
+  })
 
 
 //This works if it is just a simple array of names
