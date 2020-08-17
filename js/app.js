@@ -25,7 +25,7 @@ presidents.forEach(president => {
  * need to find names of presidents who are only marked as online, as these should be who is commenting
  */
 
-let nameArray = presidents.map(a => a.name);
+let nameArray = presidents.map(pres => pres.name); //(pres => pres.isOnline); //This makes an array just of the names.
 console.log(nameArray);
 
  function randomName (nameArray) {
