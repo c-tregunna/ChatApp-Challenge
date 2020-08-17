@@ -26,15 +26,39 @@ presidents.forEach(president => {
  */
 
 
-let nameArray = presidents.map(pres => pres.isOnline); //(pres => pres.isOnline); //This makes an array just of the names.
+ /*
+//Dustin Solution
+const onlinePresidents = []; //create an empty array
+presidents.forEach((pres) => { //loop through the presidents array
+   if (pres.isOnline) {  // check if isOnline = true
+      onlinePresidents.push(pres); // push this to the onlinePresidents array
+    }
+});
+
+console.log(onlinePresidents);
+
+let nameArray = onlinePresidents.map(pres => pres.name);  //This makes an array just of the names from the above if statment.
 console.log(nameArray);
 
- function randomName (nameArray) {
+ function randomName (nameArray) { //randomly pick a name from the nameArray
+    return nameArray[Math.floor(Math.random()*nameArray.length)];
+
+ }
+ */
+
+//Jamie solution
+let namesArray = presidents.filter( (president => president.isOnline !== false)); //filter throough the president array to check if isOnline is NOT false and create an array of these objects where the inOnline is true
+
+let nameArray = namesArray.map(pres => pres.name);  //This makes an array just of the names from the above array
+console.log(nameArray);
+
+function randomName (nameArray) { //randomly pick a name from the nameArray
     return nameArray[Math.floor(Math.random()*nameArray.length)];
 
  }
 
  console.log(randomName(nameArray));
+
 
 const messageBlock = document.querySelector('.message-display');
 const messageInput = document.querySelector('input.addMessage');

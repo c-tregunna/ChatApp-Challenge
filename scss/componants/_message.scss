@@ -8,6 +8,11 @@
     @include flex ($dir: row, $align: center, $just: space-between);
 }
 
+.message-display {
+    @include flex($dir: column, $just: flex-end);
+    overflow: scroll;
+}
+
 .message p {
     width: 100%;
     @include flex ($dir: row, $just: space-between)
