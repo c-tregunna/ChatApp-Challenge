@@ -63,8 +63,9 @@ function randomName (nameArray) { //randomly pick a name from the nameArray
 const messageBlock = document.querySelector('.message-display');
 const messageInput = document.querySelector('input.addMessage');
 const submitButton = document.querySelector('button.submit');
+const form = document.querySelector('form');
 
-submitButton.addEventListener('submit', (e) => {
+form.addEventListener('submit', (e) => {
     e.preventDefault();
     if(messageInput.value === "") {
         alert("Don't forget your message");
@@ -79,7 +80,7 @@ submitButton.addEventListener('submit', (e) => {
     message.appendChild(text);
     messageInput.value = '';
     messageBlock.appendChild(message);
-}
+    }
   });
 
   /**

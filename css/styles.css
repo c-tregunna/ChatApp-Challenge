@@ -596,6 +596,10 @@ footer {
   display: none !important;
 }
 
+form {
+  width: 100%;
+}
+
 input {
   width: 90%;
   height: 80%;
