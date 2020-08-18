@@ -82,11 +82,33 @@ submitButton.addEventListener('click', () => {
   });
 
   const offLine = document.querySelector('.online');
+  const offLineLi = document.querySelector('.offline-li');
+  const busyLi = document.querySelector('.busy-li');
+  const onlineLi = document.querySelector('.online-li');
+  const onlineLi2 = document.querySelector('.online-li2');
 
-  offLine.addEventListener('click', e => {
+  offLineLi.addEventListener('click', e => {
+    onlineLi.textContent = "Offline";
+})
+
+  busyLi.addEventListener('click', e => {
+    onlineLi.textContent = "Busy";
+
+})
+onlineLi2.addEventListener('click', e => {
+    onlineLi.textContent = "Online";
+
+})
+
+  offLine.addEventListener('mouseenter', e => {
       const onlineList = document.querySelector('#offline');
       onlineList.classList.toggle('hidden');
   })
+
+  offLine.addEventListener('mouseleave', e => {
+    const onlineList = document.querySelector('#offline');
+    onlineList.classList.toggle('hidden');
+})
 
 
 //This works if it is just a simple array of names

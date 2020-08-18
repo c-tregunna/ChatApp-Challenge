@@ -451,6 +451,7 @@ header {
   width: 10%;
   height: 80%;
   margin: 20px;
+  cursor: pointer;
 }
 .buttons ul,
 .online ul {
@@ -547,7 +548,7 @@ footer {
 #offline {
   position: absolute;
   top: 80%;
-  right: 30px;
+  right: 20px;
   z-index: 10000;
   color: white;
   width: 10%;
@@ -566,6 +567,12 @@ footer {
   font-size: 1.5em;
   margin-right: 6px;
   color: #ff8a8a;
+}
+#offline :nth-child(3)::before {
+  content: "●";
+  font-size: 1.5em;
+  margin-right: 6px;
+  color: #94F6D3;
 }
 #offline li {
   width: 100%;

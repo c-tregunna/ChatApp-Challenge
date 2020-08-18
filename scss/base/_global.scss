@@ -33,6 +33,7 @@ header {
     width: 10%;
     height: 80%;
     margin: 20px;
+    cursor: pointer;
     & ul{
         @include flex($dir: row, $just: center, $align: center);
     }
@@ -119,9 +120,8 @@ footer {
 #offline {
     position: absolute;
     top: 80%;
-    right: 30px;
+    right: 20px;
     z-index: 10000;
-
     color: white;
     width: 10%;
     @include flex($dir: column, $align: flex-start);
@@ -136,6 +136,12 @@ footer {
         font-size: 1.5em;
         margin-right: 6px;
         color:#ff8a8a;
+    }
+    & :nth-child(3)::before {
+        content: "●";
+        font-size: 1.5em;
+        margin-right: 6px;
+        color:#94F6D3;
     }
     & li {
         width: 100%;
