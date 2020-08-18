@@ -448,7 +448,7 @@ header {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: 10%;
+  width: 20%;
   height: 80%;
   margin: 20px;
   cursor: pointer;
@@ -468,6 +468,14 @@ header {
 .online .window-btn::before {
   content: "●";
   font-size: 1.5em;
+}
+
+.online-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 90px;
 }
 
 .online:not(.is-online) {
@@ -493,7 +501,10 @@ header {
 }
 
 .is-online {
-  color: #94F6D3;
+  width: 0.75em;
+  height: 0.75em;
+  border-radius: 50%;
+  background-color: #94F6D3;
 }
 
 .arrow {
@@ -548,7 +559,7 @@ footer {
 #offline {
   position: absolute;
   top: 80%;
-  right: 20px;
+  right: 70px;
   z-index: 10000;
   color: white;
   width: 10%;

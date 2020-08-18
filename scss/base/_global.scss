@@ -30,7 +30,7 @@ header {
 .buttons,
 .online {
     @include flex($dir: row, $just: center, $align: center);
-    width: 10%;
+    width: 20%;
     height: 80%;
     margin: 20px;
     cursor: pointer;
@@ -44,6 +44,12 @@ header {
         content: "●";
         font-size: 1.5em;
     }
+}
+
+.online-wrapper {
+    @include flex($dir: row, $just: space-between, $align: center);
+    width: 90px;
+
 }
 
 .online:not(.is-online) {
@@ -68,7 +74,10 @@ header {
 }
 
 .is-online {
-    color: #94F6D3;
+    width: .75em;
+    height: .75em;
+    border-radius: 50%;
+    background-color: #94F6D3;
 }
 
 .arrow {
@@ -120,7 +129,7 @@ footer {
 #offline {
     position: absolute;
     top: 80%;
-    right: 20px;
+    right: 70px;
     z-index: 10000;
     color: white;
     width: 10%;

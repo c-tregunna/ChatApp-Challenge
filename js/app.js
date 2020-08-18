@@ -64,7 +64,8 @@ const messageBlock = document.querySelector('.message-display');
 const messageInput = document.querySelector('input.addMessage');
 const submitButton = document.querySelector('button.submit');
 
-submitButton.addEventListener('click', () => {
+submitButton.addEventListener('submit', (e) => {
+    e.preventDefault();
     if(messageInput.value === "") {
         alert("Don't forget your message");
     } else {
@@ -81,23 +82,30 @@ submitButton.addEventListener('click', () => {
 }
   });
 
+  /**
+   * Set online, offline, busy options
+   */
+
   const offLine = document.querySelector('.online');
   const offLineLi = document.querySelector('.offline-li');
   const busyLi = document.querySelector('.busy-li');
   const onlineLi = document.querySelector('.online-li');
   const onlineLi2 = document.querySelector('.online-li2');
+  const isOnline = document.querySelector('.is-online');
 
   offLineLi.addEventListener('click', e => {
     onlineLi.textContent = "Offline";
+    isOnline.style.backgroundColor = "#cfd8d4";
 })
 
   busyLi.addEventListener('click', e => {
     onlineLi.textContent = "Busy";
+    isOnline.style.backgroundColor = "#ff8a8a";
 
 })
 onlineLi2.addEventListener('click', e => {
     onlineLi.textContent = "Online";
-
+    isOnline.style.backgroundColor = "#94f6d3";
 })
 
   offLine.addEventListener('mouseenter', e => {
