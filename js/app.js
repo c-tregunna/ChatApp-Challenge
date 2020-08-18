@@ -81,10 +81,10 @@ submitButton.addEventListener('click', () => {
 }
   });
 
-  const offLine = document.querySelector('.arrow');
+  const offLine = document.querySelector('.online');
 
   offLine.addEventListener('click', e => {
-      const onlineList = document.querySelector('.offline');
+      const onlineList = document.querySelector('#offline');
       onlineList.classList.toggle('hidden');
   })
 

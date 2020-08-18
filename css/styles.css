@@ -544,22 +544,34 @@ footer {
   box-shadow: 0px 2px 2px rgba(120, 120, 120, 0.5);
 }
 
-.offline {
+#offline {
   position: absolute;
   top: 80%;
   right: 30px;
   z-index: 10000;
-  background-color: #78828c;
-  border: 1px solid #FFF;
   color: white;
-  width: 16%;
-  border-radius: 4px;
+  width: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
-.offline ::before {
+#offline :first-child::before {
   content: "●";
   font-size: 1.5em;
   color: #cfd8d4;
   margin-right: 6px;
+}
+#offline :nth-child(2)::before {
+  content: "●";
+  font-size: 1.5em;
+  margin-right: 6px;
+  color: #ff8a8a;
+}
+#offline li {
+  width: 100%;
+  border: 1px solid #FFF;
+  background-color: #78828c;
+  border-radius: 4px;
 }
 
 .hidden {
